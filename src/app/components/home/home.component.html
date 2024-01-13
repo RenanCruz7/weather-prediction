@@ -1,36 +1,11 @@
 <div class="container">
       <h1 class="texto-principal ff-fira">Previsão do Tempo</h1>
-      <form (ngSubmit)="pesquisaCidade(f)" #f="ngForm">
+      <form (ngSubmit)="pesquisa()" #f="ngForm">
             <input class="campo" placeholder="Insira aqui o nome da Cidade" type="text" [(ngModel)]="city">
+            <app-weather-card>
+                  [city]="city"
+                  (click)="pesquisaCidade()"
+            </app-weather-card>
       </form>
-
-
-      <div>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            <h2>Messiiiiiiiiiiiiiiiii</h2>
-            
-      </div>
 </div>
   

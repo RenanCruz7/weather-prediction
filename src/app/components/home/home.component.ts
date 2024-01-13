@@ -1,5 +1,5 @@
 import { WeatherserviceService } from './../../services/weatherservice.service';
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,13 +8,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-city!:string;
-weatherData: any;
+@Output() city!: string 
 
-constructor(private  weatherService:WeatherserviceService){}
 
-pesquisaCidade(form: NgForm){
-  this.weatherService.consultaTempo(this.city).subscribe(data=>{this.weatherData=data})
+pesquisa(){
+  console.log("fjasdjfajsdfjasd")
 }
 
 }
