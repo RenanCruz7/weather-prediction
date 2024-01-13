@@ -1,6 +1,6 @@
-import { WeatherserviceService } from './../../services/weatherservice.service';
-import { Component, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { WeatherserviceService } from 'src/app/services/weatherservice.service';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +8,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-@Output() city!: string 
+  city!: string;
+  weatherData: any;
 
+constructor(private weatherService: WeatherserviceService){}
 
-pesquisa(){
-  console.log("fjasdjfajsdfjasd")
-}
+ngOnInit(){}
 
+pesquisa() {
+  console.log(this.city)
+  this.weatherService.consultaTempo(this.city)
+  .subscribe(data => {
+    this.weatherData = data;
+  })
+  }
 }

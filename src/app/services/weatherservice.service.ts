@@ -1,19 +1,25 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherserviceService {
 
-  private readonly apiKey = "f6e0ea0dab5dbb1303a2a971e6601eff"
+  apiKey = "a86070b7a24e79b0594bca250ef14bd5"
 
-  header = new HttpHeaders({
-  })
   constructor(private http: HttpClient) { }
 
+  consultaTempo(city: string): Observable<any> {
+    // Construir os parâmetros da URL usando HttpParams
+    const params = new HttpParams()
+      .set('q', city)
+      .set('appid', this.apiKey)
+      .set('units', 'metric')
+      .set('lang', 'pt_br');
 
-  consultaTempo(city: string){
-    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q={city}&lang=pt_b&appid={this.apiKey}&units=metric`)
+    // Passar os parâmetros na requisição
+    return this.http.get('https://api.openweathermap.org/data/2.5/weather', { params });
   }
 }

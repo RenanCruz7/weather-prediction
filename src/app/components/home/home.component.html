@@ -1,11 +1,14 @@
 <div class="container">
       <h1 class="texto-principal ff-fira">Previsão do Tempo</h1>
-      <form (ngSubmit)="pesquisa()" #f="ngForm">
-            <input class="campo" placeholder="Insira aqui o nome da Cidade" type="text" [(ngModel)]="city">
-            <app-weather-card>
-                  [city]="city"
-                  (click)="pesquisaCidade()"
-            </app-weather-card>
+      <form>
+        <input class="campo" placeholder="Insira aqui o nome da Cidade" type="text" name="city" [(ngModel)]="city">
+        <button type="button" (click)="pesquisa()">funcionaaaaaaa</button>
       </form>
+
+      <div *ngIf="weatherData">
+        <h2>{{weatherData.name}}</h2>
+        <p>{{weatherData.main.temp}}</p>
+        <p>{{weatherData.weather[0].description}}</p>
+      </div>
 </div>
-  
+    
