@@ -5,10 +5,5 @@
     <button type="button" (click)="pesquisa()">Pesquisar</button>
   </form>
 
-  <div *ngIf="weatherData">
-    <h2>{{ weatherData.name }}</h2>
-    <p>Temperatura: {{ weatherData.temp }}°C</p>
-    <p>Descrição: {{ weatherData.description }}</p>
-    <!-- Adicione mais campos conforme necessário -->
-  </div>
+  <app-weather-card [weatherData]="weatherData"></app-weather-card>
 </div>

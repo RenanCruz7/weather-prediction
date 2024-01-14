@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, Input } from '@angular/core';
 import { City } from 'src/app/interfaces/city';
 import { WeatherserviceService } from 'src/app/services/weatherservice.service';
 
