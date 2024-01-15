@@ -1,4 +1,10 @@
-<div *ngIf="weatherData">
-    <h2>{{ weatherData.temp }}</h2>
+<div class="container">
+    <div class="box" *ngIf="weatherData">
+        <h2 class="ff-fira">{{ weatherData.name }}</h2>
+        <img>
+        <h1 class="ff-fira temperatura">{{weatherData.temp}}°C </h1>
+        <h2 class="descricao ff-fira">{{weatherData.description}}</h2>
+    </div>
 </div>
+
   

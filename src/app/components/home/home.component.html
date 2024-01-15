@@ -1,9 +1,8 @@
 <div class="container">
   <h1 class="texto-principal ff-fira">Previsão do Tempo</h1>
   <form>
-    <input class="campo" placeholder="Insira aqui o nome da Cidade" type="text" name="city" [(ngModel)]="city">
-    <button type="button" (click)="pesquisa()">Pesquisar</button>
+    <input class="campo" (submit)="pesquisa()" placeholder="Insira aqui o nome da Cidade" type="text" name="city" [(ngModel)]="city">
+    <button class="botao ff-fira" (click)="pesquisa()" role="button">Pesquisar</button>
+    <app-weather-card [weatherData]="weatherData"></app-weather-card>
   </form>
-
-  <app-weather-card [weatherData]="weatherData"></app-weather-card>
 </div>
