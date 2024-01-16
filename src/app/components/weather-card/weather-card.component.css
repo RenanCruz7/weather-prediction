@@ -12,3 +12,9 @@
 .descricao{
     text-align: center;
 }
+.weather-icon {
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}

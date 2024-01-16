@@ -2,7 +2,7 @@
     <div class="box" *ngIf="weatherData">
         <h2 class="ff-fira">{{ weatherData.name }}</h2>
         <h1 class="ff-fira temperatura">{{weatherData.temp}}°C </h1>
-        <img>
+        <img [src]="getWeatherIconPath()" alt="Weather Icon" class="weather-icon">
         <h2 class="descricao ff-fira">{{weatherData.description}}</h2>
     </div>
 </div>

@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { WeatherserviceService } from './../../services/weatherservice.service';
 import { City } from 'src/app/interfaces/city';
 
 @Component({
@@ -8,6 +7,28 @@ import { City } from 'src/app/interfaces/city';
   styleUrls: ['./weather-card.component.css']
 })
 export class WeatherCardComponent {
-  @Input() weatherData: City | undefined
+  @Input() weatherData: City | undefined;
 
+  getWeatherIconPath(): string {
+    if (this.weatherData && this.weatherData.main) {
+      const weatherMain = this.weatherData.main.toLowerCase();
+      switch (weatherMain) {
+        case 'clear':
+          return "/assets/images/clear.png";
+        case 'clouds':
+          return '/assets/images/clouds.png';
+        case 'drizzle':
+          return '/assets/images/drizzle.png';
+        case 'mist':
+          return '/assets/images/mist.png';
+        case 'snow':
+          return '/assets/images/snow.png';
+        case 'rain':
+          return '/assets/images/rain.png';
+        default:
+          return '/assets/images/default.png';
+      }
+    }
+    return '/assets/images/default.png';
+  }
 }
