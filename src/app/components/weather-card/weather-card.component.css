@@ -1,5 +1,8 @@
 .box{
+    margin-top: 15px;
     padding: 15px;
+    background-color: #594cee;
+    border-radius: 15px;
 }
 .temperatura{
     text-align: center;
