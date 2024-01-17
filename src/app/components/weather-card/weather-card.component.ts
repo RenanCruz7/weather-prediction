@@ -25,6 +25,8 @@ export class WeatherCardComponent {
           return '/assets/images/snow.png';
         case 'rain':
           return '/assets/images/rain.png';
+        case 'thunderstorm':
+          return '/assets/images/rain.png';
         default:
           return '/assets/images/default.png';
       }

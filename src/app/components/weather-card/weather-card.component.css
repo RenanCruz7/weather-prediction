@@ -1,20 +1,51 @@
-.box{
+.box {
     margin-top: 15px;
     padding: 15px;
     background-color: #594cee;
     border-radius: 15px;
 }
-.temperatura{
+
+.temperatura {
     text-align: center;
     margin: 15px;
 }
 
-.descricao{
+.descricao {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+    height: auto;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temperature-block {
     text-align: center;
 }
-.weather-icon {
-    display: block; /* Garante que a imagem seja exibida como um bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    max-width: 100px; /* Define a largura máxima da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+
+.icon-wrapper {
+    margin: 0 15px; /* Adiciona um espaçamento entre o ícone e as temperaturas */
+}
+
+.min-temperature, .max-temperature {
+    margin: 0;
+}
+
+.ff-fira {
+    margin: 0;
 }
